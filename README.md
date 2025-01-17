@@ -130,7 +130,7 @@ The model's performance was assessed using various evaluation metrics, demonstra
 
 ![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
 
-    - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
-    - **Precision**: 77%, showing the proportion of correctly identified `1` (longer than 48 hours) predictions out of all predicted `1` values. A focus on reducing false positives could further improve this.
-    - **Recall**: 89%, highlighting the model's ability to identify most true `1` instances. This is particularly valuable when missing delayed requests has higher consequences.
-    - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
+   - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
+   - **Precision**: 77%, showing the proportion of correctly identified `1` (longer than 48 hours) predictions out of all predicted `1` values. A focus on reducing false positives could further improve this.
+   - **Recall**: 89%, highlighting the model's ability to identify most true `1` instances. This is particularly valuable when missing delayed requests has higher consequences.
+   - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
