@@ -126,7 +126,7 @@ The model's performance was assessed using various evaluation metrics, demonstra
    
 ![Confusion Matrix](images/confusion_matrix.png)
    
-3. **Classification Metrics**:
+2. **Classification Metrics**:
 
     - Accuracy: 87% of predictions were correct, indicating good overall performance.
     - Precision: 77%, showing the proportion of correctly identified 1 (longer than 48 hours) predictions out of all predicted 1 values. A focus on reducing false positives could further improve this.
