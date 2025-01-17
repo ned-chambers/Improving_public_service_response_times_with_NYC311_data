@@ -123,6 +123,7 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 - **Evaluation Metrics**:
 The model's performance was assessed using various evaluation metrics, demonstrating its strong predictive ability:
 1. **Confusion Matrix**:
+The confusion matrix indicates the model performs well at distinguishing between delayed and non-delayed requests, with relatively low false positives and false negatives. This balance suggests the model is effective for prioritising cases likely to exceed the 48-hour threshold.
    
 ![Confusion Matrix](images/confusion_matrix.png)
    
