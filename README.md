@@ -123,9 +123,13 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 - **Evaluation Metrics**:
 The model's performance was assessed using various evaluation metrics, demonstrating its strong predictive ability:
 1. **Confusion Matrix**:
-   ![Confusion Matrix](images/confusion_matrix.png)
-2. **Classification Metrics**:
-   ![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
+   
+![Confusion Matrix](images/confusion_matrix.png)
+   
+3. **Classification Metrics**:
+
+![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
+
     - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
     - **Precision**: 77%, showing the proportion of correctly identified `1` (longer than 48 hours) predictions out of all predicted `1` values. A focus on reducing false positives could further improve this.
     - **Recall**: 89%, highlighting the model's ability to identify most true `1` instances. This is particularly valuable when missing delayed requests has higher consequences.
