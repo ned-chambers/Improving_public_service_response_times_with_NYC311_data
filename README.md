@@ -121,5 +121,12 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - Trained Logistic Regression and Random Forest Models to predict whether a service request would take over 48 hours to resolve.
     - Selected Logistic Regression as the final model due to it outperforming the Random Forest model slightly in all evaluation metrics, including ROC AUC, F1 Score, Accuracy, Precision and Recall (see below).
 - **Evaluation Metrics**:
-    - Explain the metrics used to assess model performance (e.g., accuracy, precision, recall, F1-score, ROC-AUC).
-    - Include a summary of the evaluation results.
+The model's performance was assessed using various evaluation metrics, demonstrating its strong predictive ability:
+1. **Confusion Matrix**:
+   ![Confusion Matrix](images/dataiku/confusion_matrix.png)
+2. **Classification Metrics**:
+   ![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/dataiku/evaluation_metrics.png)
+    - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
+    - **Precision**: 77%, showing the proportion of correctly identified `1` (longer than 48 hours) predictions out of all predicted `1` values. A focus on reducing false positives could further improve this.
+    - **Recall**: 89%, highlighting the model's ability to identify most true `1` instances. This is particularly valuable when missing delayed requests has higher consequences.
+    - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
