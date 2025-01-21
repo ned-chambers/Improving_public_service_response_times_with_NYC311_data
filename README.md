@@ -146,6 +146,7 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
       
 3. **Feature Importance**:
+     
 ![Feature Importance](images/feature_importance.png)
 
     - The most significant predictor of delayed resolution times was:
