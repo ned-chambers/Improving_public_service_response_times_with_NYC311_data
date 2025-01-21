@@ -147,12 +147,15 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
       
 3. **Feature Importance**:
     - The most significant predictor of delayed resolution times was:
+      
         - **Agency Name (`agency_name`)**: This feature contributed 53% to the model's predictive power, underscoring the critical role of the responding agency in determining resolution times.
+          
             - The **New York City Police Department (NYPD)** consistently contributed to a negative prediction, indicating response times under 48 hours. This suggests that the NYPD has efficient processes in place to manage its large volume of service requests. Additionally, the nature of their requests may inherently require quicker resolution or may involve relatively straightforward actions (e.g., a phone call or a site visit).
             - In contrast, the **Department of Housing Preservation and Development**, the **Department of Transportation**, and the **Department of Sanitation** were strongly associated with longer response times. These delays are likely due to logistical challenges such as:
                 - The complexity of resolving infrastructure-related issues or coordinating inspections.
                 - The need for collaboration across multiple teams or agencies.
                 - Potential resource allocation constraints or high service demands.
+                  
     - **Complaint Type (`complaint_type`) a**ccounted for 10% of feature importance, indicating that the nature of the request significantly impacts the likelihood of delays (e.g. infrastructure or maintenance-related complaints tend to take considerably longer to resolve).
     - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
     - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
