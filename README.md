@@ -159,10 +159,10 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
         - The need for collaboration across multiple teams or agencies.
         - Potential resource allocation constraints or high service demands.
                   
-    - **Complaint Type (`complaint_type`) a**ccounted for 10% of feature importance, indicating that the nature of the request significantly impacts the likelihood of delays (e.g. infrastructure or maintenance-related complaints tend to take considerably longer to resolve).
-    - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
-    - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
-    - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
+  - **Complaint Type (`complaint_type`) a**ccounted for 10% of feature importance, indicating that the nature of the request significantly impacts the likelihood of delays (e.g. infrastructure or maintenance-related complaints tend to take considerably longer to resolve).
+  - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
+  - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
+  - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
       
 5. **Insights on Feature Contribution**:
     - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
