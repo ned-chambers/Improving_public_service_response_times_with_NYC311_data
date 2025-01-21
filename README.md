@@ -144,7 +144,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 1. **Model Performance**:
     - The model demonstrated strong performance, with an **accuracy of 87%**, an **F1-score of 82%**, and an **ROC AUC of 0.952**, indicating excellent discrimination between delayed and non-delayed requests.
     - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
-2. **Feature Importance**:
+      
+3. **Feature Importance**:
     - The most significant predictor of delayed resolution times was:
         - **Agency Name (`agency_name`)**: This feature contributed 53% to the model's predictive power, underscoring the critical role of the responding agency in determining resolution times.
             - The **New York City Police Department (NYPD)** consistently contributed to a negative prediction, indicating response times under 48 hours. This suggests that the NYPD has efficient processes in place to manage its large volume of service requests. Additionally, the nature of their requests may inherently require quicker resolution or may involve relatively straightforward actions (e.g., a phone call or a site visit).
@@ -156,11 +157,13 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
     - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
     - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
-3. **Insights on Feature Contribution**:
+      
+4. **Insights on Feature Contribution**:
     - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
     - Temporal features like `created_dow` and `created_hour` highlight opportunities to optimise staffing during peak or off-hours.
     - The predictive power of `complaint_type` and `location_type` underscores the need for tailored strategies to address recurring delays in high-priority complaint categories or specific types of locations.
-4. **Implications for Urban Management**:
+      
+5. **Implications for Urban Management**:
     - Focused improvements in underperforming agencies could significantly reduce resolution delays.
     - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
     - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
