@@ -146,8 +146,6 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
       
 3. **Feature Importance**:
-     
-![Feature Importance](images/feature_importance.png)
 
 - The most significant predictor of delayed resolution times was:
       
@@ -163,7 +161,9 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
   - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
   - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
   - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
-      
+
+![Feature Importance](images/feature_importance.png)
+
 5. **Insights on Feature Contribution**:
     - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
     - Temporal features like `created_dow` and `created_hour` highlight opportunities to optimise staffing during peak or off-hours.
