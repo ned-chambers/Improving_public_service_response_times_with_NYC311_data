@@ -146,6 +146,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
       
 3. **Feature Importance**:
+![Feature Importance](images/feature_importance.png)
+
     - The most significant predictor of delayed resolution times was:
       
         - **Agency Name (`agency_name`)**: This feature contributed 53% to the model's predictive power, underscoring the critical role of the responding agency in determining resolution times.
@@ -161,12 +163,12 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
     - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
       
-4. **Insights on Feature Contribution**:
+5. **Insights on Feature Contribution**:
     - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
     - Temporal features like `created_dow` and `created_hour` highlight opportunities to optimise staffing during peak or off-hours.
     - The predictive power of `complaint_type` and `location_type` underscores the need for tailored strategies to address recurring delays in high-priority complaint categories or specific types of locations.
       
-5. **Implications for Urban Management**:
+6. **Implications for Urban Management**:
     - Focused improvements in underperforming agencies could significantly reduce resolution delays.
     - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
     - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
