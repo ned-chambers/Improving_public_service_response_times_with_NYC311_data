@@ -173,3 +173,50 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - Focused improvements in underperforming agencies could significantly reduce resolution delays.
     - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
     - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
+    - 
+
+## Exploratory Data Analysis (EDA) Insights
+
+### Resolution Time Analysis
+
+- **64.84% of complaints are resolved within 48 hours**.
+- The **shortest resolution times (0-10 minutes)** primarily involve complaints that can be automatically classified or quickly assessed, likely requiring minimal human intervention.
+- The **longest resolution times (2+ days)** typically involve complex interventions, such as detailed inspections, investigations, or corrective work, which require more resources and coordination.
+
+### Factors Influencing Resolution Times
+
+#### **Fast Resolutions**
+- **Automatic Classification:**
+  - Duplicate cases detected and merged.
+  - No violation found (e.g., noise complaints, rodent sightings) closed after automated assessment.
+  - Some complaints simply redirect users to self-service resources instead of direct intervention.
+- **Police Quick Assessments:**
+  - The NYPD resolves many noise and illegal parking complaints within minutes via quick on-site checks.
+- **Minimal Physical Intervention:**
+  - Issues like off-leash dogs and minor sanitation concerns may be resolved with warnings rather than inspections.
+
+#### **Long Resolutions**
+- **Complex Repairs and Inspections:**
+  - Infrastructure issues (streetlights, hydrants, road conditions, mold, sanitation violations) require multiple steps and coordination.
+  - Housing-related complaints require access and coordination between agencies, landlords, and tenants.
+- **Administrative & Legal Delays:**
+  - Ownership verification (e.g., abandoned vehicles) and legal procedures (e.g., illegal construction) slow down resolution.
+  - Some cases close with 'no violation found,' leading to repeated submissions and extended resolution times.
+
+### Key Agencies and Their Role
+- **Fast Resolutions:**
+  - **New York City Police Department (NYPD)**: Noise complaints, illegal parking, quick resolutions.
+  - **Department of Health and Mental Hygiene**: Rodent-related complaints.
+  - **Department of Environmental Protection**: Water leaks, open hydrants.
+- **Slow Resolutions:**
+  - **Department of Buildings (DOB)**: Illegal construction and structural inspections.
+  - **Department of Housing Preservation and Development (HPD)**: Unsanitary housing complaints.
+  - **Department of Transportation (DOT)**: Road and infrastructure repairs.
+  - **Department of Parks and Recreation**: Public space maintenance.
+
+### Implications for NYC Services
+- Faster classification and automated filtering reduce resolution times but may leave issues unresolved.
+- Complex repairs and legal processes contribute to delays, requiring better coordination and follow-up mechanisms.
+- Resource allocation should prioritize high-impact complaint types and locations with frequent delays.
+
+These insights will guide predictive modeling and recommendations for improving NYC311 service efficiency.
