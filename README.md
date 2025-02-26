@@ -218,5 +218,3 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 - Faster classification and automated filtering reduce resolution times, but may leave issues unresolved.
 - Complex repairs and legal processes contribute to delays, requiring better coordination and follow-up mechanisms.
 - Resource allocation should **prioritise high-impact complaint types** and **locations with frequent delays**.
-
-These insights will guide predictive modeling and recommendations for improving NYC311 service efficiency.
