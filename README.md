@@ -200,7 +200,7 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
   - Infrastructure issues (streetlights, hydrants, road conditions, mold, sanitation violations) require multiple steps and coordination.
   - Housing-related complaints require access and coordination between agencies, landlords, and tenants.
 - **Administrative & Legal Delays:**
-  - Ownership verification (e.g., abandoned vehicles) and legal procedures (e.g., illegal construction) slow down resolution.
+  - Ownership verification (e.g. abandoned vehicles) and legal procedures (e.g. illegal construction) slow down resolution.
   - Some cases close with 'no violation found', leading to repeated submissions and extended resolution times.
 
 ### Key Agencies and Their Role
@@ -215,8 +215,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
   - **Department of Parks and Recreation**: Public space maintenance.
 
 ### Implications for NYC Services
-- Faster classification and automated filtering reduce resolution times but may leave issues unresolved.
+- Faster classification and automated filtering reduce resolution times, but may leave issues unresolved.
 - Complex repairs and legal processes contribute to delays, requiring better coordination and follow-up mechanisms.
-- Resource allocation should prioritize high-impact complaint types and locations with frequent delays.
+- Resource allocation should **prioritise high-impact complaint types** and **locations with frequent delays**.
 
 These insights will guide predictive modeling and recommendations for improving NYC311 service efficiency.
