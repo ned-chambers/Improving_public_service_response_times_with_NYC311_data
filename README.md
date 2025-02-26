@@ -201,7 +201,7 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
   - Housing-related complaints require access and coordination between agencies, landlords, and tenants.
 - **Administrative & Legal Delays:**
   - Ownership verification (e.g., abandoned vehicles) and legal procedures (e.g., illegal construction) slow down resolution.
-  - Some cases close with 'no violation found,' leading to repeated submissions and extended resolution times.
+  - Some cases close with 'no violation found', leading to repeated submissions and extended resolution times.
 
 ### Key Agencies and Their Role
 - **Fast Resolutions:**
