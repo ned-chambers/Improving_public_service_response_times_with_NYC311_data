@@ -254,3 +254,7 @@ The cleaned dataset underwent further transformations in Power Query to prepare 
 1. **Feature engineering - creation of `resolution_time`field:**
 - A new column, `resolution_time` was added, applying conditional logic to create bins for the resolution time of service requests based on values in `resolution_time_hours` column for easier categorisation of requests.
 - Another column, `resolution_time_sort_order`, was created to provide values to sort `resolution_time` by, so that `resolution_time` acts as an ordered categorical variable and categories display in the correct order in visuals.
+
+---
+
+### Dashboard features
