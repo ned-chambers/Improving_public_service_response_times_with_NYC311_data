@@ -276,6 +276,8 @@ The Power BI dashboard is divided into several interactive pages, each providing
         - Request status
     - Cards showing the total number of service requests overall and the number of service requests for each borough are automatically updated according to the filters selected.
 
+![Dashboard page 1 - Overview](images/dashboard_1_overview.png)
+
 2. **Resolution times:**
 - Provides a global breakdown of resolution times for NYC 311 service requests in 2023.
 - A stacked bar chart shows the percentage of the total number of service requests for each resolution time category (0-5 hours, 5-10 hours, 10-24 hours, 24-48 hours, >48 hours, and negative response times).
@@ -285,7 +287,9 @@ The Power BI dashboard is divided into several interactive pages, each providing
     - Borough
     - Complaint type
     - Agency
-    
+
+![Dashboard page 2 - Resolution times](images/dashboard_2_resolution_times.png)
+
 3. **Agencies:**
 - Allows users to see the request volume and response times for each NYC city government agency.
 - A horizontal stacked bar chart shows the number of requests and the breakdown of resolution times for each agency, with longer response times shown in black.
@@ -295,7 +299,15 @@ The Power BI dashboard is divided into several interactive pages, each providing
     - Location type
     - Borough
 
-4. **Heatmap**:
+![Dashboard page 3 - Agencies](images/dashboard_3_agencies.png)
+
+4. **Complaint types**:
+
+![Dashboard page 4 - Complaint types](images/dashboard_4_complaint_types.png)
+
+
+
+5. **Heatmap**:
 - Allows users to see the density of service requests made in different parts of New York City via a heatmap.
 - Provides insights into hotspots for different types of service requests.
 - Buttons and slicers allow for detailed filtering by:
@@ -311,6 +323,8 @@ The Power BI dashboard is divided into several interactive pages, each providing
     - Neighborhood
     - Request status
 
+![Dashboard page 5 - Heatmap](images/dashboard_5_heatmap.png)
+
 5. **Negative response times**:
 - Allows city officials to better understand which types of requests are recorded with erroneous “negative” response times, indicating data entry errors.
 - Helps users understand how to improve the quality of NYC 311 data by identifying problematic data and exploring the factors behind it.
@@ -324,3 +338,5 @@ The Power BI dashboard is divided into several interactive pages, each providing
     - Neighborhood
     - Description
     - Location type
+      
+![Dashboard page 6 - Negative response times](images/dashboard_6_negative_response_times.png)
