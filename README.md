@@ -4,11 +4,15 @@
 
 This project analyses data from **NYC 311 Service Requests** to uncover trends, identify opportunities to improve response times, and provide actionable insights for urban management. The dataset includes information on complaints related to a wide range of areas overseen by city services.
 
+---
+
 ## About NYC311 Service Requests
 
 NYC311 is the official non-emergency services and information portal for New York City residents and visitors. Launched in 2003, it serves as a centralised hub for reporting issues, accessing City services, and obtaining information about City government programmes. Through various channels—including phone, web, and a mobile application—users can report problems and receive updates on the status of their inquiries.
 
 According to NYC311’s Website, “a Service Request is your request for the City to provide you with assistance, perform an inspection, or address a problem. NYC311 can accept Service Requests for a wide range of issues, including over 500 complaint types. Service Requests can help you get a pothole fixed in your neighborhood, the heat turned on in your apartment, or a refund for an overpaid parking ticket.”
+
+---
 
 ## Objectives
 
@@ -16,6 +20,8 @@ According to NYC311’s Website, “a Service Request is your request for the Ci
 - Identify key drivers of service efficiency and delays.
 - Develop a predictive machine learning model to help public service agents flag if a request is likely to take over 48 hours to complete, in order to help prioritise tasks, allocate resources efficiently, and optimise service response times.
 - Propose actionable recommendations for improving response times from city services.
+
+---
 
 ## Dataset
 
@@ -35,12 +41,16 @@ According to NYC311’s Website, “a Service Request is your request for the Ci
     - `latitude`: The geo-based latitude of the incident location.
     - `longitude`: The geo-based longitude of the incident location.
 
+---
+
 ## Methodology
 
 1. Data cleaning, and preprocessing.
 2. Exploratory data analysis (EDA) in Python for trends and outliers.
 3. Predictive modeling in Dataiku: flagging requests likely to have longer resolution times.
 4. Visualisation of findings using an interactive dashboard in Power BI.
+
+---
 
 ## Data Cleaning and Transformation
 
@@ -91,6 +101,8 @@ The following steps outline the process used to clean and prepare the data for a
 
 - The cleaned and processed data was exported to three separate CSV files for further analysis.
 
+---
+
 ## Predictive Modeling (Dataiku)
 
 ### Data Preprocessing for Machine Learning
@@ -115,6 +127,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - Split the dataset into training (80%) and testing (20%) subsets to evaluate model performance.
     - Used **class rebalancing** as a sampling method to ensure an even distribution of both target values (`0` and `1`) in the training set, minimizing potential biases during model training.
 
+---
+
 ### **Model Development and Evaluation**
 
 - **Model Training**:
@@ -138,6 +152,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
 
 ![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
+
+---
 
 ### **Key Insights from the Dataiku Model**
 
@@ -174,6 +190,8 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
     - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
     - 
+
+---
 
 ## Exploratory Data Analysis (EDA) Insights
 
