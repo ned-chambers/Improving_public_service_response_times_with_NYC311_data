@@ -258,3 +258,69 @@ The cleaned dataset underwent further transformations in Power Query to prepare 
 ---
 
 ### Dashboard features
+
+The Power BI dashboard is divided into several interactive pages, each providing dynamic insights into a different aspect of the city’s public service requests and their response times:
+
+1. **Overview:**
+    - Provides a global overview of service requests made to NYC 311 in 2023, with a point map showing where each service request was created (broken down by borough).
+    - Slicers and buttons allow users to filter the map by:
+        - Resolution time
+        - Borough
+        - Complaint type
+        - Description
+        - Location type
+        - Agency
+        - Channel
+        - Zip code
+        - Neighborhood
+        - Request status
+    - Cards showing the total number of service requests overall and the number of service requests for each borough are automatically updated according to the filters selected.
+
+2. **Resolution times:**
+- Provides a global breakdown of resolution times for NYC 311 service requests in 2023.
+- A stacked bar chart shows the percentage of the total number of service requests for each resolution time category (0-5 hours, 5-10 hours, 10-24 hours, 24-48 hours, >48 hours, and negative response times).
+- A horizontal 100% stacked bar chart allows users to see the breakdown of resolution time categories for each borough.
+- Long resolution times (>48 hours) are shown in black, while erroneous “negative” response times are shown in red.
+- Slicers allow users to filter by:
+    - Borough
+    - Complaint type
+    - Agency
+    
+3. **Agencies:**
+- Allows users to see the request volume and response times for each NYC city government agency.
+- A horizontal stacked bar chart shows the number of requests and the breakdown of resolution times for each agency, with longer response times shown in black.
+- Slicers provide the ability to filter by:
+    - Complaint type
+    - Complaint description
+    - Location type
+    - Borough
+
+4. **Heatmap**:
+- Allows users to see the density of service requests made in different parts of New York City via a heatmap.
+- Provides insights into hotspots for different types of service requests.
+- Buttons and slicers allow for detailed filtering by:
+    - Resolution time
+    - Date created
+    - Complaint type
+    - Complaint description
+    - Location type
+    - Agency
+    - Channel
+    - Zip code
+    - Agency
+    - Neighborhood
+    - Request status
+
+5. **Negative response times**:
+- Allows city officials to better understand which types of requests are recorded with erroneous “negative” response times, indicating data entry errors.
+- Helps users understand how to improve the quality of NYC 311 data by identifying problematic data and exploring the factors behind it.
+- Provides stacked bar charts showing volume of “negative” response times by complaint type and by agency.
+- Slicers allow users to filter by:
+    - Date created
+    - Complaint type
+    - Description
+    - Borough
+    - Request status
+    - Neighborhood
+    - Description
+    - Location type
