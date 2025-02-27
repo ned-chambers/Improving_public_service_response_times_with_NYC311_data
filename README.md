@@ -218,3 +218,21 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 - Faster classification and automated filtering reduce resolution times, but may leave issues unresolved.
 - Complex repairs and legal processes contribute to delays, requiring better coordination and follow-up mechanisms.
 - Resource allocation should **prioritise high-impact complaint types** and **locations with frequent delays**.
+
+---
+
+## Power BI dashboard
+
+A Power BI dashboard was then made for dynamic exploration of factors influencing the response times of public service requests made to NYC 311.
+
+---
+
+### Data Cleaning and Transformation in Power Query
+
+The cleaned dataset underwent further transformations in Power Query to prepare it for analysis in Power BI.
+
+1. **Importing:**
+- The cleaned dataset was loaded into Power Query for transformation.
+1. **Feature engineering - creation of `resolution_time`field:**
+- A new column, `resolution_time` was added, applying conditional logic to create bins for the resolution time of service requests based on values in `resolution_time_hours` column for easier categorisation of requests.
+- Another column, `resolution_time_sort_order`, was created to provide values to sort `resolution_time` by, so that `resolution_time` acts as an ordered categorical variable and categories display in the correct order in visuals.
