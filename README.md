@@ -303,6 +303,15 @@ The Power BI dashboard is divided into several interactive pages, each providing
 
 4. **Complaint types**:
 
+- Provides insights into the most frequent types of complaints and seasonal trends in complaint types.
+- A horizontal bar chart allows users to see the 10 most frequent complaints for the applied filters.
+- A line graph provides insights into how the complaint volumes for these top 10 complaints change over time, providing insights into seasonal trends.
+- Slicers and buttons allow users to filter by:
+    - Resolution time
+    - Borough
+    - Agency
+    - Date created
+
 ![Dashboard page 4 - Complaint types](images/dashboard_4_complaint_types.png)
 
 
