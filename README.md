@@ -264,7 +264,7 @@ The Power BI dashboard is divided into several interactive pages, each providing
 
 Below is a showcase of the interactive features of the dashboard:
 
-![Dashboard demo gif](images/dashboard_demo.gif)
+<img src="images/dashboard_demo.gif" alt="Dashboard demo gif" width="800" />
 
 ---
 
