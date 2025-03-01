@@ -354,3 +354,26 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
     - Focused improvements in underperforming agencies could significantly reduce resolution delays.
     - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
     - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
+
+---
+
+## Technologies Used
+The following tools and technologies were used to develop this project:
+
+- **Python**: For cleaning, transforming and exploring the dataset.
+- **Power BI**: For creating the interactive dashboard.
+- **Power Query**: For further transformations of the dataset to prepare it for use in Power BI.
+- **Dataiku**: For further preprocessing for Machine Learning and predictive modelling of response times.
+- **GitHub**: For version control and project hosting.
+
+---
+
+## Future Improvements
+Possible future improvements to this project include:
+
+- Implementing a real-time data pipeline to continuously update the dashboard & ML model (e.g. using Apache Airflow and a cloud-hosted datalake and data warehouse)
+- Refactoring the data preprocessing code in DAG format (for use in Apache Airflow) & for better readability
+- Investing in Power BI and Dataiku licenses to facilitate deployment
+- Adding a function to allow NYC agencies and public users to submit feedback
+
+**Other ideas?** Please make a pull request or email ned.chambers@gmail.com 📧
