@@ -260,6 +260,14 @@ The Power BI dashboard is divided into several interactive pages, each providing
 
 ---
 
+### Demonstration
+
+Below is a showcase of the interactive features of the dashboard:
+
+![Dashboard demo gif](images/dashboard_demo.gif)
+
+---
+
 ## Predictive Modeling (Dataiku)
 
 ### Data Preprocessing for Machine Learning
