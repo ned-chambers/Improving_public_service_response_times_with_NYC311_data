@@ -47,8 +47,8 @@ According to NYC311’s Website, “a Service Request is your request for the Ci
 
 1. Data cleaning, and preprocessing.
 2. Exploratory data analysis (EDA) in Python for trends and outliers.
-3. Predictive modeling in Dataiku: flagging requests likely to have longer resolution times.
-4. Visualisation of findings using an interactive dashboard in Power BI.
+3. Visualisation of findings using an interactive dashboard in Power BI.
+4. Predictive modeling in Dataiku: flagging requests likely to have longer resolution times.
 
 ---
 
@@ -100,96 +100,6 @@ The following steps outline the process used to clean and prepare the data for a
 ### Exportation
 
 - The cleaned and processed data was exported to three separate CSV files for further analysis.
-
----
-
-## Predictive Modeling (Dataiku)
-
-### Data Preprocessing for Machine Learning
-
-The cleaned and transformed dataset was further prepared in Dataiku for machine learning, focusing on creating a robust and unbiased model. Key preprocessing steps included:
-
-1. **Importing and Data Validation**:
-    - Imported the **Positive Response Times** dataset from a CSV file.
-    - Validated column data types and descriptions to ensure compatibility with Dataiku’s machine learning workflow.
-2. **Feature Selection and Engineering**:
-    - **Target Variable Creation**:
-        - Created the target column, `flag_longer_than_48h`, a binary feature indicating whether a request’s resolution time (`resolution_time_hours`) exceeds 48 hours (`1`) or not (`0`).
-    - **Feature Engineering**:
-        - Extracted date components from the `created_date` column, creating additional features such as `created_hour`, `created_dow` (day of the week), `created_week_of_year`, and `created_month`.
-        - Selected relevant columns for the model, including:
-            - **Target Variable**: `flag_longer_than_48h`
-            - **Key Features**: `agency`, `complaint_type`, `borough`, `flag_new_york_city`, and `location_type_general`.
-    - **Noise and Leakage Mitigation**:
-        - Removed 22 columns likely to cause data leakage (e.g., `status`, `resolution_time_hours`, `created_date`, `closed_date`, `due_date`, `resolution_action_updated_date`, `resolution_description`, and their derivatives).
-        - Excluded features contributing noise, such as `unique_key`, `latitude`, and `longitude`.
-3. **Data Splitting**:
-    - Split the dataset into training (80%) and testing (20%) subsets to evaluate model performance.
-    - Used **class rebalancing** as a sampling method to ensure an even distribution of both target values (`0` and `1`) in the training set, minimizing potential biases during model training.
-
----
-
-### **Model Development and Evaluation**
-
-- **Model Training**:
-    - Trained Logistic Regression and Random Forest Models to predict whether a service request would take over 48 hours to resolve.
-    - Selected Logistic Regression as the final model due to it outperforming the Random Forest model slightly in all evaluation metrics, including ROC AUC, F1 Score, Accuracy, Precision and Recall (see below).
-- **Evaluation Metrics**:
-
-    The model's performance was assessed using various evaluation metrics, demonstrating its strong predictive ability:
-
-1. **Confusion Matrix**:
-
-    The confusion matrix indicates the model performs well at distinguishing between delayed and non-delayed requests, with relatively low false positives and false negatives. This balance suggests the model is effective for prioritising cases likely to exceed the 48-hour threshold.
-   
-![Confusion Matrix](images/confusion_matrix.png)
-   
-2. **Classification Metrics**:
-
-    - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
-    - **Precision**: 77%, showing the proportion of correctly identified 1 (longer than 48 hours) predictions out of all predicted 1 values. A focus on reducing false positives could further improve this.
-    - **Recall**: 89%, highlighting the model's ability to identify most true 1 instances. This is particularly valuable when missing delayed requests has higher consequences.
-    - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
-
-![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
-
----
-
-### **Key Insights from the Dataiku Model**
-
-1. **Model Performance**:
-    - The model demonstrated strong performance, with an **accuracy of 87%**, an **F1-score of 82%**, and an **ROC AUC of 0.952**, indicating excellent discrimination between delayed and non-delayed requests.
-    - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
-      
-3. **Feature Importance**:
-
-- The most significant predictor of delayed resolution times was:
-      
-  - **Agency Name (`agency_name`)**: This feature contributed 53% to the model's predictive power, underscoring the critical role of the responding agency in determining resolution times.
-          
-    - The **New York City Police Department (NYPD)** consistently contributed to a negative prediction, indicating response times under 48 hours. This suggests that the NYPD has efficient processes in place to manage its large volume of service requests. Additionally, the nature of their requests may inherently require quicker resolution or may involve relatively straightforward actions (e.g., a phone call or a site visit).
-    - In contrast, the **Department of Housing Preservation and Development**, the **Department of Transportation**, and the **Department of Sanitation** were strongly associated with longer response times. These delays are likely due to logistical challenges such as:
-        - The complexity of resolving infrastructure-related issues or coordinating inspections.
-        - The need for collaboration across multiple teams or agencies.
-        - Potential resource allocation constraints or high service demands.
-                  
-  - **Complaint Type (`complaint_type`) a**ccounted for 10% of feature importance, indicating that the nature of the request significantly impacts the likelihood of delays (e.g. infrastructure or maintenance-related complaints tend to take considerably longer to resolve).
-  - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
-  - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
-  - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
-
-![Feature Importance](images/feature_importance.png)
-
-5. **Insights on Feature Contribution**:
-    - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
-    - Temporal features like `created_dow` and `created_hour` highlight opportunities to optimise staffing during peak or off-hours.
-    - The predictive power of `complaint_type` and `location_type` underscores the need for tailored strategies to address recurring delays in high-priority complaint categories or specific types of locations.
-      
-6. **Implications for Urban Management**:
-    - Focused improvements in underperforming agencies could significantly reduce resolution delays.
-    - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
-    - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
-    - 
 
 ---
 
@@ -314,8 +224,6 @@ The Power BI dashboard is divided into several interactive pages, each providing
 
 ![Dashboard page 4 - Complaint types](images/dashboard_4_complaint_types.png)
 
-
-
 5. **Heatmap**:
 - Allows users to see the density of service requests made in different parts of New York City via a heatmap.
 - Provides insights into hotspots for different types of service requests.
@@ -349,3 +257,92 @@ The Power BI dashboard is divided into several interactive pages, each providing
     - Location type
       
 ![Dashboard page 6 - Negative response times](images/dashboard_6_negative_response_times.png)
+
+---
+
+## Predictive Modeling (Dataiku)
+
+### Data Preprocessing for Machine Learning
+
+The cleaned and transformed dataset was further prepared in Dataiku for machine learning, focusing on creating a robust and unbiased model. Key preprocessing steps included:
+
+1. **Importing and Data Validation**:
+    - Imported the **Positive Response Times** dataset from a CSV file.
+    - Validated column data types and descriptions to ensure compatibility with Dataiku’s machine learning workflow.
+2. **Feature Selection and Engineering**:
+    - **Target Variable Creation**:
+        - Created the target column, `flag_longer_than_48h`, a binary feature indicating whether a request’s resolution time (`resolution_time_hours`) exceeds 48 hours (`1`) or not (`0`).
+    - **Feature Engineering**:
+        - Extracted date components from the `created_date` column, creating additional features such as `created_hour`, `created_dow` (day of the week), `created_week_of_year`, and `created_month`.
+        - Selected relevant columns for the model, including:
+            - **Target Variable**: `flag_longer_than_48h`
+            - **Key Features**: `agency`, `complaint_type`, `borough`, `flag_new_york_city`, and `location_type_general`.
+    - **Noise and Leakage Mitigation**:
+        - Removed 22 columns likely to cause data leakage (e.g., `status`, `resolution_time_hours`, `created_date`, `closed_date`, `due_date`, `resolution_action_updated_date`, `resolution_description`, and their derivatives).
+        - Excluded features contributing noise, such as `unique_key`, `latitude`, and `longitude`.
+3. **Data Splitting**:
+    - Split the dataset into training (80%) and testing (20%) subsets to evaluate model performance.
+    - Used **class rebalancing** as a sampling method to ensure an even distribution of both target values (`0` and `1`) in the training set, minimizing potential biases during model training.
+
+---
+
+### **Model Development and Evaluation**
+
+- **Model Training**:
+    - Trained Logistic Regression and Random Forest Models to predict whether a service request would take over 48 hours to resolve.
+    - Selected Logistic Regression as the final model due to it outperforming the Random Forest model slightly in all evaluation metrics, including ROC AUC, F1 Score, Accuracy, Precision and Recall (see below).
+- **Evaluation Metrics**:
+
+    The model's performance was assessed using various evaluation metrics, demonstrating its strong predictive ability:
+
+1. **Confusion Matrix**:
+
+    The confusion matrix indicates the model performs well at distinguishing between delayed and non-delayed requests, with relatively low false positives and false negatives. This balance suggests the model is effective for prioritising cases likely to exceed the 48-hour threshold.
+   
+![Confusion Matrix](images/confusion_matrix.png)
+   
+2. **Classification Metrics**:
+
+    - **Accuracy**: 87% of predictions were correct, indicating good overall performance.
+    - **Precision**: 77%, showing the proportion of correctly identified 1 (longer than 48 hours) predictions out of all predicted 1 values. A focus on reducing false positives could further improve this.
+    - **Recall**: 89%, highlighting the model's ability to identify most true 1 instances. This is particularly valuable when missing delayed requests has higher consequences.
+    - **F1-Score**: 82%, balancing precision and recall, showcasing the model's effectiveness in handling imbalanced data.
+
+![Classification Metrics - Accuracy, Precision, Recall and F1-Score](images/evaluation_metrics.png)
+
+---
+
+### **Key Insights from the Dataiku Model**
+
+1. **Model Performance**:
+    - The model demonstrated strong performance, with an **accuracy of 87%**, an **F1-score of 82%**, and an **ROC AUC of 0.952**, indicating excellent discrimination between delayed and non-delayed requests.
+    - The high **recall (89%)** ensures the model effectively identifies the majority of delayed requests, critical for resource prioritization.
+      
+3. **Feature Importance**:
+
+- The most significant predictor of delayed resolution times was:
+      
+  - **Agency Name (`agency_name`)**: This feature contributed 53% to the model's predictive power, underscoring the critical role of the responding agency in determining resolution times.
+          
+    - The **New York City Police Department (NYPD)** consistently contributed to a negative prediction, indicating response times under 48 hours. This suggests that the NYPD has efficient processes in place to manage its large volume of service requests. Additionally, the nature of their requests may inherently require quicker resolution or may involve relatively straightforward actions (e.g., a phone call or a site visit).
+    - In contrast, the **Department of Housing Preservation and Development**, the **Department of Transportation**, and the **Department of Sanitation** were strongly associated with longer response times. These delays are likely due to logistical challenges such as:
+        - The complexity of resolving infrastructure-related issues or coordinating inspections.
+        - The need for collaboration across multiple teams or agencies.
+        - Potential resource allocation constraints or high service demands.
+                  
+  - **Complaint Type (`complaint_type`) a**ccounted for 10% of feature importance, indicating that the nature of the request significantly impacts the likelihood of delays (e.g. infrastructure or maintenance-related complaints tend to take considerably longer to resolve).
+  - **Location Type (`location_type`)** and **Descriptor (`descriptor`) c**ontributed 5% each, reflecting the importance of contextual details about where and what the issue is.
+  - **Day of the Week (`created_dow`) r**epresented 3%: feature importance shows that requests created over the weekend took longer to resolve.
+  - Less influential but still relevant features included location-related features such as `cross_street_1`, `address_type` and `incident_zip`,  which provide additional contextual information for the model.
+
+![Feature Importance](images/feature_importance.png)
+
+5. **Insights on Feature Contribution**:
+    - The dominance of `agency_name` suggests that delays are heavily influenced by operational factors within specific agencies, such as resource allocation or workload.
+    - Temporal features like `created_dow` and `created_hour` highlight opportunities to optimise staffing during peak or off-hours.
+    - The predictive power of `complaint_type` and `location_type` underscores the need for tailored strategies to address recurring delays in high-priority complaint categories or specific types of locations.
+      
+6. **Implications for Urban Management**:
+    - Focused improvements in underperforming agencies could significantly reduce resolution delays.
+    - Analysing specific complaint types and locations with high delay probabilities can guide resource allocation to areas with the greatest impact.
+    - Temporal patterns offer opportunities to optimize staffing and operations during identified periods of high service demand.
