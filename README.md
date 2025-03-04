@@ -105,7 +105,7 @@ According to NYC311’s Website, “a Service Request is your request for the Ci
 1. Data cleaning, and preprocessing.
 2. Exploratory data analysis (EDA) in Python for trends and outliers.
 3. Visualisation of findings using an interactive dashboard in Power BI.
-4. Predictive modeling in Dataiku: flagging requests likely to have longer resolution times.
+4. Predictive modelling in Dataiku: flagging requests likely to have longer resolution times.
 
 ---
 
@@ -325,7 +325,7 @@ Below is a showcase of the interactive features of the dashboard:
 
 ---
 
-## Predictive Modeling (Dataiku)
+## Predictive modelling (Dataiku)
 
 ### Data Preprocessing for Machine Learning
 
