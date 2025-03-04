@@ -7,7 +7,7 @@
 This end-to-end data analysis project was developed as part of the **Fullstack Data Analysis** training programme at **Jedha Bootcamp**.  
 
 The project was a collaborative effort by:  
-- **[Ned Chambers](https://www.linkedin.com/in/nedchambers/)** – dataset sourcing and business problem analysis, data cleaning and transformation, machine learning preparation and predictive modelling in Dataiku, data visualisation in Power BI, and GitHub documentation.  
+- **[Ned Chambers](https://www.linkedin.com/in/nedchambers/)** – dataset sourcing and business problem analysis, data cleaning and transformation, machine learning preprocessing and predictive modelling in Dataiku, data visualisation in Power BI, and GitHub documentation.  
 - **[Iryna Vorobiova](https://www.linkedin.com/in/iryna-vorobiova-374604170/)** – data cleaning and transformation, exploratory data analysis (EDA), data visualisation in Python and Power BI, and dashboard wireframing and prototyping.  
 - **[David Charpentier](https://www.linkedin.com/in/david-charpentier-2b5479165/)** – data cleaning and transformation, data modelling and visualisation in Power BI, and PowerPoint documentation.  
 
@@ -70,7 +70,7 @@ By leveraging these findings, NYC agencies can **improve service delivery, reduc
 
 ---
 
-# 2. Project Overview
+# 2. Project overview
 
 This project analyses data from **NYC311 Service Requests** to uncover trends, identify opportunities to improve response times, and provide actionable insights for urban management. The dataset includes information on complaints related to a wide range of areas overseen by city services.
 
