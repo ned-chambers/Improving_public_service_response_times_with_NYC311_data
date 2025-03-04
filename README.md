@@ -446,4 +446,17 @@ Possible future improvements to this project include:
 - Investing in Power BI and Dataiku licenses to facilitate deployment
 - Adding a function to allow NYC agencies and public users to submit feedback
 
-**Other ideas?** Please make a pull request or email ned.chambers@gmail.com 📧
+**Other ideas?** Please make a pull request or email ned.chambers@gmail.com 📧 (Suggestions will be considered for integration from April 2025 onwards)
+
+---
+
+# 8. Project repository structure
+
+NYC311-Service-Requests/
+│── data/                    # Google Drive links to raw and processed data files
+│── notebooks/                # Jupyter Notebooks for EDA
+│── scripts/                  # Python scripts for preprocessing and analysis
+│── dashboards/               # Google Drive link to Power BI `.pbix` files
+│── models/                   # Dataiku ML model artifacts
+│── images/                   # Visualisations and screenshots
+│── README.md                 # The file you are reading now
