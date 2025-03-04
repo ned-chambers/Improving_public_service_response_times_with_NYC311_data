@@ -452,11 +452,11 @@ Possible future improvements to this project include:
 
 # 8. Project repository structure
 
-NYC311-Service-Requests/
-│── data/                    # Google Drive links to raw and processed data files
-│── notebooks/                # Jupyter Notebooks for EDA
-│── scripts/                  # Python scripts for preprocessing and analysis
-│── dashboards/               # Google Drive link to Power BI `.pbix` files
-│── models/                   # Dataiku ML model artifacts
-│── images/                   # Visualisations and screenshots
-│── README.md                 # The file you are reading now
+NYC311-Service-Requests/</br>
+│── data/                    # Google Drive links to raw and processed data files</br>
+│── notebooks/                # Jupyter Notebooks for EDA</br>
+│── scripts/                  # Python scripts for preprocessing and analysis</br>
+│── dashboards/               # Google Drive link to Power BI `.pbix` files</br>
+│── models/                   # Dataiku ML model artifacts</br>
+│── images/                   # Visualisations and screenshots</br>
+│── README.md                 # The file you are reading now</br>
