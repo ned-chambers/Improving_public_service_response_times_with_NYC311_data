@@ -20,39 +20,39 @@ This project presents a comprehensive analysis of **NYC311 Service Requests** da
 
 **NYC311** is the **official non-emergency service request system** for New York City, allowing residents to report issues related to **housing, sanitation, noise complaints, infrastructure, and other public services**. Requests are handled by various city agencies, with response times varying based on issue complexity and resource availability.  
 
-## Key Findings
+## Key findings
 
-- **Resolution Times:**  
+- **Resolution times:**  
   - Approximately **64.84%** of complaints are resolved within 48 hours.  
   - The **shortest resolution times (0-10 minutes)** occur for requests that can be **automatically classified or quickly assessed**, such as **duplicate reports, noise complaints, or illegal parking**, often handled by the **NYPD**.  
   - The **longest resolution times (over 48 hours)** involve **complex interventions**, such as:
     - **Mold complaints in residential buildings** (average **60+ days**) due to required inspections and landlord cooperation.  
-    - **Tree pruning or removal requests** (average **90+ days**) due to limited resources and prioritization by the **Department of Parks & Recreation**.
+    - **Tree pruning or removal requests** (average **90+ days**) due to limited resources and/or lower prioritisation by the **Department of Parks & Recreation**.
 
-- **Factors Affecting Resolution Times:**  
-  - **Fast Resolutions:** Requests involving **automatic classification, minor infractions, or quick visual inspections** tend to have **low resolution times**.  
-  - **Long Resolutions:** Complaints requiring **multi-agency coordination, detailed inspections, or legal procedures** (such as **housing violations, road repairs, or abandoned vehicle removal**) have **extended resolution times**.
+- **Factors affecting resolution times:**  
+  - **Fast resolutions:** Requests involving **automatic classification, minor infractions, or quick visual inspections** tend to have **low resolution times**.  
+  - **Long resolutions:** Complaints requiring **multi-agency coordination, detailed inspections, or legal procedures** (such as **housing violations, road repairs, or abandoned vehicle removal**) have **extended resolution times**.
 
-- **Agency Performance:**  
-  - The **New York City Police Department (NYPD)** efficiently resolves **many noise and parking-related issues** within minutes.  
+- **Agency performance:**  
+  - The **New York City Police Department (NYPD)** efficiently resolves many noise and parking-related issues within minutes, and almost all non-urgent complaints within 48 hours.  
   - Agencies like the **Department of Housing Preservation and Development (HPD), the Department of Transportation (DOT), and the Department of Sanitation (DSNY)** are linked to **longer resolution times** due to the complexity of their cases and resource allocation challenges.
 
-## Methodologies Employed
+## Methodologies employed
 
-- **Data Processing:** Cleaned and transformed the dataset using **Python (Pandas, NumPy, Matplotlib, Seaborn)**.  
-- **Exploratory Data Analysis (EDA):** Identified trends, outliers, and key factors affecting response times.  
-- **Visualization:** Developed an interactive **Power BI dashboard** to dynamically explore resolution times across complaint types, agencies, and locations.  
-- **Predictive Modeling:** Built a **machine learning model in Dataiku** to flag requests likely to **exceed 48-hour resolution times**, helping prioritize urgent cases and optimize resource allocation.
+- **Data processing:** Cleaned and transformed the dataset using **Python** and its data analysis libraries (Pandas, NumPy, Matplotlib, Seaborn)**.  
+- **Exploratory data analysis (EDA):** Identified trends, outliers, and key factors affecting response times.  
+- **Visualisation:** Developed an interactive **Power BI dashboard** to dynamically explore resolution times across complaint types, agencies, and locations.  
+- **Predictive modelling:** Built a **machine learning model in Dataiku** to flag requests likely to **exceed 48-hour resolution times**, helping prioritise urgent cases and optimise resource allocation.
 
-## Business Implications
+## Business implications
 
 This analysis provides actionable insights to improve NYC service request handling by:  
 
-- **Enhancing Resource Allocation:** Identifying complaint types and locations with chronic delays allows targeted **deployment of resources**.  
-- **Process Optimization:** Agencies can streamline workflows for **common delay factors** to improve efficiency.  
-- **Policy Improvements:** Data-driven insights can guide policy decisions to **enhance service responsiveness and public satisfaction**.
+- **Enhancing resource allocation:** Identifying complaint types and locations with chronic delays allows targeted **deployment of resources**.  
+- **Process optimisation:** Agencies can streamline workflows for **common delay factors** to improve efficiency.  
+- **Policy improvements:** Data-driven insights can guide policy decisions to **enhance service responsiveness and public satisfaction**.
 
-By leveraging these findings, NYC agencies can improve **service delivery, reduce response times, and optimize urban management strategies**.
+By leveraging these findings, NYC agencies can **improve service delivery, reduce response times, and optimise urban management strategies**.
 
 
 ---
