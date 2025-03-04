@@ -1,4 +1,17 @@
-# Improving public service response times with NYC311 Service Requests data
+# Improving public service response times with NYC311 Service Requests data 🚕
+
+---
+
+## Contributors  
+
+This end-to-end Data Analysis project was developed as part of the **Fullstack Data Analysis** training programme at **Jedha Bootcamp**. 
+
+The project was a collaborative effort by:  
+- **Ned Chambers** – dataset sourcing and business problem analysis, data cleaning and transformation, machine learning preparation and predictive modelling in Dataiku, data visualisation in Power BI, and documentation on GitHub.  
+- **Iryna Vorobiova** – data cleaning and transformation, exploratory data analysis and data visualisation in Python and Power BI, and dashboard wireframing and prototyping.
+- **David Charpentier** – data cleaning and transformation, data modelling and visualisation in Power BI, and documentation in PowerPoint.
+
+The team worked together on data analysis, machine learning, and visualisation to derive actionable insights from NYC 311 Service Requests data for public servants to improve urban management strategies.
 
 ---
 
