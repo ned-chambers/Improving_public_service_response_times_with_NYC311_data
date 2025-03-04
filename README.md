@@ -427,7 +427,42 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 
 ---
 
-# 6. Technologies used
+# 6. Recommendations for the Office of the Mayor of NYC  
+
+Based on our analysis of NYC311 service requests, we propose the following strategic actions to **enhance service response times, improve resource allocation, and boost public satisfaction**: 
+
+## 1️⃣ **Automate & streamline service requests**  
+- Implement AI-driven **automatic triaging and classification** of service requests to expedite routing and prioritisation.  
+- Develop **automated response mechanisms** for minor complaints (e.g., noise complaints, duplicate cases) to free up agency resources for complex interventions.  
+- Expand the use of **chatbots and self-service platforms** to empower residents to resolve common issues without requiring manual intervention.  
+
+## 2️⃣ **Improve inter-agency collaboration**  
+- Establish a **centralised task management system** that allows agencies to share case progress in real time and **reduce bottlenecks in multi-agency requests**.  
+- Implement **cross-agency training programmes** to streamline workflows and improve response coordination for complex issues (e.g., housing violations, infrastructure repairs).  
+- Enhance **data-sharing protocols** to ensure that key information (e.g., previous violations, landlord history) is available to all relevant agencies.  
+
+## 3️⃣ **Prioritise timely, high-quality interventions**  
+- Develop a **priority-based intervention framework** that allocates resources based on urgency, impact, and historical resolution times.  
+- Optimise scheduling by **deploying field teams based on predictive demand models**, ensuring that high-priority complaints receive faster responses.  
+- Introduce **performance-based accountability measures** for agencies to improve resolution efficiency while maintaining service quality.  
+
+## 4️⃣ **Strengthen follow-up mechanisms**  
+- Implement **automated follow-up notifications** to ensure complaints are not left unresolved beyond expected timelines.  
+- Introduce **citizen feedback loops** where residents can rate the effectiveness of interventions, helping refine service improvements.  
+- Design a **re-escalation process** for unresolved or recurrent issues, preventing repeated complaints from being dismissed without resolution.  
+
+## 5️⃣ **Improve data logging & quality control**  
+- Standardise **data entry practices** across all agencies to **reduce inconsistencies and errors** (e.g., eliminating negative response times in records).  
+- Expand the use of **geospatial tagging and time-stamped logs** to improve tracking of service request resolution patterns.  
+- Conduct **periodic audits** to assess data completeness and accuracy, ensuring reliable decision-making for future urban policy planning.  
+
+# **Conclusion**  
+By implementing these recommendations, the Office of the Mayor of New York City can significantly **reduce service request backlogs, enhance agency efficiency, and improve overall public service delivery**. These data-driven strategies will not only optimise response times, but also strengthen public trust in city services.  
+
+
+---
+
+# 7. Technologies used
 The following tools and technologies were used to develop this project:
 
 - **Python**: For cleaning, transforming and exploring the dataset.
@@ -438,7 +473,7 @@ The following tools and technologies were used to develop this project:
 
 ---
 
-# 7. Future improvements
+# 8. Future improvements
 Possible future improvements to this project include:
 
 - Implementing a real-time data pipeline to continuously update the dashboard & ML model (e.g. using Apache Airflow and a cloud-hosted datalake and data warehouse)
@@ -450,7 +485,7 @@ Possible future improvements to this project include:
 
 ---
 
-# 8. Project repository structure
+# 9. Project repository structure
 
 NYC311-Service-Requests/</br>
 │── data/                     # Google Drive links to raw and processed data files</br>
