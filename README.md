@@ -453,7 +453,7 @@ Possible future improvements to this project include:
 # 8. Project repository structure
 
 NYC311-Service-Requests/</br>
-│── data/                    # Google Drive links to raw and processed data files</br>
+│── data/                     # Google Drive links to raw and processed data files</br>
 │── notebooks/                # Jupyter Notebooks for EDA</br>
 │── scripts/                  # Python scripts for preprocessing and analysis</br>
 │── dashboards/               # Google Drive link to Power BI `.pbix` files</br>
