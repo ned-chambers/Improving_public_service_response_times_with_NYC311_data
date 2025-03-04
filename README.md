@@ -1,8 +1,65 @@
-# NYC311 Service Requests Analysis
+# Improving public service response times with NYC311 Service Requests data
+
+---
+
+## Skills showcased
+
+- **End-to-end data project management**, covering the full lifecycle from data extraction, cleaning, and analysis to predictive modelling and visualisation.  
+- **Data analysis and visualisation** with Python libraries and Power BI.  
+- **Dashboard development**, creating an interactive Power BI dashboard with filtering capabilities.  
+- **Machine learning and predictive modelling** in Dataiku.  
+- **Data cleaning and transformation** using Python and Power Query.  
+- **ETL pipelines**, extracting, transforming, and preparing data for analysis.  
+- **Business insights and decision-making**, identifying key factors impacting service response times.  
+
+---
+
+# 1. Executive summary
+
+This project presents a comprehensive analysis of **NYC311 Service Requests** data, aiming to uncover trends, enhance response times, and provide actionable insights for urban management.
+
+**NYC311** is the **official non-emergency service request system** for New York City, allowing residents to report issues related to **housing, sanitation, noise complaints, infrastructure, and other public services**. Requests are handled by various city agencies, with response times varying based on issue complexity and resource availability.  
+
+## Key Findings
+
+- **Resolution Times:**  
+  - Approximately **64.84%** of complaints are resolved within 48 hours.  
+  - The **shortest resolution times (0-10 minutes)** occur for requests that can be **automatically classified or quickly assessed**, such as **duplicate reports, noise complaints, or illegal parking**, often handled by the **NYPD**.  
+  - The **longest resolution times (over 48 hours)** involve **complex interventions**, such as:
+    - **Mold complaints in residential buildings** (average **60+ days**) due to required inspections and landlord cooperation.  
+    - **Tree pruning or removal requests** (average **90+ days**) due to limited resources and prioritization by the **Department of Parks & Recreation**.
+
+- **Factors Affecting Resolution Times:**  
+  - **Fast Resolutions:** Requests involving **automatic classification, minor infractions, or quick visual inspections** tend to have **low resolution times**.  
+  - **Long Resolutions:** Complaints requiring **multi-agency coordination, detailed inspections, or legal procedures** (such as **housing violations, road repairs, or abandoned vehicle removal**) have **extended resolution times**.
+
+- **Agency Performance:**  
+  - The **New York City Police Department (NYPD)** efficiently resolves **many noise and parking-related issues** within minutes.  
+  - Agencies like the **Department of Housing Preservation and Development (HPD), the Department of Transportation (DOT), and the Department of Sanitation (DSNY)** are linked to **longer resolution times** due to the complexity of their cases and resource allocation challenges.
+
+## Methodologies Employed
+
+- **Data Processing:** Cleaned and transformed the dataset using **Python (Pandas, NumPy, Matplotlib, Seaborn)**.  
+- **Exploratory Data Analysis (EDA):** Identified trends, outliers, and key factors affecting response times.  
+- **Visualization:** Developed an interactive **Power BI dashboard** to dynamically explore resolution times across complaint types, agencies, and locations.  
+- **Predictive Modeling:** Built a **machine learning model in Dataiku** to flag requests likely to **exceed 48-hour resolution times**, helping prioritize urgent cases and optimize resource allocation.
+
+## Business Implications
+
+This analysis provides actionable insights to improve NYC service request handling by:  
+
+- **Enhancing Resource Allocation:** Identifying complaint types and locations with chronic delays allows targeted **deployment of resources**.  
+- **Process Optimization:** Agencies can streamline workflows for **common delay factors** to improve efficiency.  
+- **Policy Improvements:** Data-driven insights can guide policy decisions to **enhance service responsiveness and public satisfaction**.
+
+By leveraging these findings, NYC agencies can improve **service delivery, reduce response times, and optimize urban management strategies**.
+
+
+---
 
 ## Project Overview
 
-This project analyses data from **NYC 311 Service Requests** to uncover trends, identify opportunities to improve response times, and provide actionable insights for urban management. The dataset includes information on complaints related to a wide range of areas overseen by city services.
+This project analyses data from **NYC311 Service Requests** to uncover trends, identify opportunities to improve response times, and provide actionable insights for urban management. The dataset includes information on complaints related to a wide range of areas overseen by city services.
 
 ---
 
@@ -151,7 +208,7 @@ The following steps outline the process used to clean and prepare the data for a
 
 ## Power BI dashboard
 
-A Power BI dashboard was then made for dynamic exploration of factors influencing the response times of public service requests made to NYC 311.
+A Power BI dashboard was then made for dynamic exploration of factors influencing the response times of public service requests made to NYC311.
 
 ---
 
@@ -172,7 +229,7 @@ The cleaned dataset underwent further transformations in Power Query to prepare 
 The Power BI dashboard is divided into several interactive pages, each providing dynamic insights into a different aspect of the city’s public service requests and their response times:
 
 1. **Overview:**
-    - Provides a global overview of service requests made to NYC 311 in 2023, with a point map showing where each service request was created (broken down by borough).
+    - Provides a global overview of service requests made to NYC311 in 2023, with a point map showing where each service request was created (broken down by borough).
     - Slicers and buttons allow users to filter the map by:
         - Resolution time
         - Borough
@@ -189,7 +246,7 @@ The Power BI dashboard is divided into several interactive pages, each providing
 ![Dashboard page 1 - Overview](images/dashboard_1_overview.png)
 
 2. **Resolution times:**
-- Provides a global breakdown of resolution times for NYC 311 service requests in 2023.
+- Provides a global breakdown of resolution times for NYC311 service requests in 2023.
 - A stacked bar chart shows the percentage of the total number of service requests for each resolution time category (0-5 hours, 5-10 hours, 10-24 hours, 24-48 hours, >48 hours, and negative response times).
 - A horizontal 100% stacked bar chart allows users to see the breakdown of resolution time categories for each borough.
 - Long resolution times (>48 hours) are shown in black, while erroneous “negative” response times are shown in red.
@@ -244,7 +301,7 @@ The Power BI dashboard is divided into several interactive pages, each providing
 
 5. **Negative response times**:
 - Allows city officials to better understand which types of requests are recorded with erroneous “negative” response times, indicating data entry errors.
-- Helps users understand how to improve the quality of NYC 311 data by identifying problematic data and exploring the factors behind it.
+- Helps users understand how to improve the quality of NYC311 data by identifying problematic data and exploring the factors behind it.
 - Provides stacked bar charts showing volume of “negative” response times by complaint type and by agency.
 - Slicers allow users to filter by:
     - Date created
