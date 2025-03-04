@@ -414,7 +414,7 @@ The cleaned and transformed dataset was further prepared in Dataiku for machine 
 
 ---
 
-# 6. Technologies Used
+# 6. Technologies used
 The following tools and technologies were used to develop this project:
 
 - **Python**: For cleaning, transforming and exploring the dataset.
@@ -425,7 +425,7 @@ The following tools and technologies were used to develop this project:
 
 ---
 
-# 7. Future Improvements
+# 7. Future improvements
 Possible future improvements to this project include:
 
 - Implementing a real-time data pipeline to continuously update the dashboard & ML model (e.g. using Apache Airflow and a cloud-hosted datalake and data warehouse)
