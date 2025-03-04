@@ -52,7 +52,7 @@ This project presents a comprehensive analysis of **NYC311 Service Requests** da
 
 ## 1.2 Methodologies employed
 
-- **Data processing:** Cleaned and transformed the dataset using **Python** and its data analysis libraries (Pandas, NumPy, Matplotlib, Seaborn)**.  
+- **Data processing:** Cleaned and transformed the dataset using **Python** and its data analysis libraries (Pandas, NumPy, Matplotlib, Seaborn).  
 - **Exploratory data analysis (EDA):** Identified trends, outliers, and key factors affecting response times.  
 - **Visualisation:** Developed an interactive **Power BI dashboard** to dynamically explore resolution times across complaint types, agencies, and locations.  
 - **Predictive modelling:** Built a **machine learning model in Dataiku** to flag requests likely to **exceed 48-hour resolution times**, helping prioritise urgent cases and optimise resource allocation.
